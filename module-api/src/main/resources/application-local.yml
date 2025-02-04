@@ -1,0 +1,7 @@
+profile: local
+
+spring:
+  application:
+    name: sample-springboot-kotlin
+
+
