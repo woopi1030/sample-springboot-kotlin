@@ -1,5 +1,6 @@
 package com.woopii.sample_springboot_kotlin.controller
 
+import DateTimeUtils
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -16,6 +17,7 @@ class HealthController(
         return """ 
                 ::::: Health Check Ok! :::::
                 1. profile : $profile
+                2. dateTimeNow : ${DateTimeUtils.getDateTimeNow(DateTimeUtils.FORMAT_yyyyMMddHHmmss)}
                 """.trimIndent()
     }
 

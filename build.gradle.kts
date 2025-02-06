@@ -7,8 +7,6 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
-
-
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
@@ -33,16 +31,21 @@ subprojects {
 	}
 
 	dependencies {
+		// Kotlin
+		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+		implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+		// Spring Web
 		implementation("org.springframework.boot:spring-boot-starter-web")
 
 		// JPA
 		implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-
 		// H2 Database
 		runtimeOnly("com.h2database:h2")
 
-		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-		implementation("org.jetbrains.kotlin:kotlin-reflect")
+		//
+
+
 		testImplementation("org.springframework.boot:spring-boot-starter-test")
 		testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 		testRuntimeOnly("org.junit.platform:junit-platform-launcher")

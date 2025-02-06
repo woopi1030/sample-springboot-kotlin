@@ -8,7 +8,7 @@ plugins {
 }
 
 dependencies {
-
+	implementation(project(":module-core"))
 }
 
 tasks.withType<KotlinCompile> {
