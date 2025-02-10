@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS sample (
     reserved_column_09 varchar(255) null comment 'reserved_column_09',
     reserved_column_10 varchar(255) null comment 'reserved_column_10',
     status varchar(20) not null default 'active' comment '상태',
-    created_id varchar(20) null comment '생성자',
+    created_by  varchar(20) null comment '생성자',
     created_at datetime not null default current_timestamp comment '생성 시간',
-    updated_id varchar(20) null comment '수정자',
+    updated_by varchar(20) null comment '수정자',
     updated_at datetime null comment '수정 시간'
 ) comment '샘플 테이블' CHARSET=utf8mb4;

@@ -7,4 +7,5 @@ plugins {
 
 dependencies {
 	implementation(project(":module-domain"))
+	implementation(project(":module-core"))
 }
