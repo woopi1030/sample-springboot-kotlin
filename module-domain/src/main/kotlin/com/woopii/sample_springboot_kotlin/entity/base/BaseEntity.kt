@@ -23,7 +23,7 @@ abstract class BaseEntity {
     var createdId: String? = null
 
     @Column(name = "created_at", updatable = false)
-    var createdAt: ZonedDateTime = ZonedDateTime.now(ZoneId.of("Asia/Seoul"))
+    open var createdAt: ZonedDateTime = ZonedDateTime.now(ZoneId.of("Asia/Seoul"))
 
     @Column(name = "updated_by")
     var updatedId: String? = null

@@ -7,7 +7,7 @@ import jakarta.persistence.Table
 
 @Table(name = "sample")
 @Entity
-open class Sample (
+class Sample (
 
     @Column(name = "reserved_column_01")
     var reservedColumn01: String? = null,

@@ -13,4 +13,8 @@ class SampleService(
         return sampleRepository.findAll()
     }
 
+    fun createSample(sample: Sample) : Sample {
+        return sampleRepository.save(sample)
+    }
+
 }
